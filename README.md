@@ -13,13 +13,13 @@ Creating and taking input for matrices of size `n × m`.
 
 ```c
 int matrix[10][10];
-int n, m;
+int m, n;
 printf("Enter rows and columns: ");
-scanf("%d %d", &n, &m);
+scanf("%d %d", &m, &n);
 
 printf("Enter matrix elements:\n");
-for(int i = 0; i < n; i++) {
-    for(int j = 0; j < m; j++) {
+for(int i = 0; i < m; i++) {
+    for(int j = 0; j < n; j++) {
         scanf("%d", &matrix[i][j]);
     }
 }
@@ -35,12 +35,12 @@ transpose[j][i] = arr[i][j]
 
 ---
 
-### 3. ✖️ Matrix Multiplication
+### 3. ✖️ Matrix Multiplication (m1 x n1) . (n1 x n2) = (m1 x n2)
 ```c
-for(int i = 0; i < n1; i++) {
-    for(int j = 0; j < m2; j++) {
+for(int i = 0; i < m1; i++) {
+    for(int j = 0; j < n2; j++) {
         result[i][j] = 0;
-        for(int k = 0; k < m1; k++) {
+        for(int k = 0; k < n1; k++) {
             result[i][j] += A[i][k] * B[k][j];
         }
     }
@@ -49,10 +49,10 @@ for(int i = 0; i < n1; i++) {
 
 ---
 
-### 4. 🔍 Symmetric Matrix Check
+### 4. 🔍 Symmetric Matrix Check (m x n)
 ```c
 int symmetric = 1;
-for(int i = 0; i < n; i++) {
+for(int i = 0; i < m; i++) {
     for(int j = 0; j < n; j++) {
         if(mat[i][j] != mat[j][i]) {
             symmetric = 0;
