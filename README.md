@@ -25,11 +25,15 @@ for(int i = 0; i < n; i++) {
 }
 ```
 
+---
+
 ### 2. 🔄 Transpose of a Matrix
 ```c
 printf("%d ", matrix[j][i]);
 transpose[j][i] = arr[i][j]
 ```
+
+---
 
 ### 3. ✖️ Matrix Multiplication
 ```c
@@ -42,6 +46,8 @@ for(int i = 0; i < n1; i++) {
     }
 }
 ```
+
+---
 
 ### 4. 🔍 Symmetric Matrix Check
 ```c
